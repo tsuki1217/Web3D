@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<style>
+
+
+</style>
+</head>
+
+<body> 
+
+<div>
+<!--
+  <div id="light" style="position:absolute;top:10vw;left:30vw;  
+background:pink;width:20px;height:20px;  
+border-radius:15px;z-index:1"></div>
+-->
+  <img src="https://i.imgur.com/omX5Drl.png" style="position:absolute;top:0vw;left:0vw;width:70vw;z-index:-1">
+  
+  <img src="https://imgur.com/zuuKlvv.png" style="position:absolute;top:70vw;left:35vw;width:30vw;z-index:1">
+
+<!--yoshi-->
+<img src="https://imgur.com/b8HTWp9.png" style="position:absolute;top:75vw;left:10vw;width:30vw;z-index:1">
+<img src="https://imgur.com/8VPDHBK.png" style="position:absolute;top:70vw;left:8vw;width:15vw;z-index:1">
+
+<!--Candy-->
+<img src="https://imgur.com/URdKQNv.png" style="position:absolute;top:5vw;left:20vw;width:10vw;z-index:1">
+<img src="https://imgur.com/URdKQNv.png" style="position:absolute;top:55vw;left:25vw;width:10vw;z-index:1">
+<img src="https://imgur.com/j19NFaa.png" style="position:absolute;top:30vw;left:16vw;width:10vw;z-index:1">
+<img src="https://imgur.com/4XAdcd5.png" style="position:absolute;top:35vw;left:46vw;width:10vw;z-index:1">
+
+
+<!--Diamond-->
+
+
+<img src="https://imgur.com/Z26koLh.png" style="position:absolute;top:85vw;left:40vw;width:30vw;z-index:1">
+<img src="https://imgur.com/BLPA9hI.png" style="position:absolute;top:90vw;left:57vw;width:30vw;z-index:1">
+
+
+<img src="https://imgur.com/DMX7YPH.png" style="position:absolute;top:105vw;left:80vw;width:7vw;z-index:1">
+<img src="https://imgur.com/DMX7YPH.png" style="position:absolute;top:110vw;left:89vw;width:7vw;z-index:1">
+
+</div>
+
+
+<script>
+class Light {
+  
+  constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
+	  this.element.style.top = '5vw';
+    this.element.style.left = '35vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(89, 50%, 51%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*70;
+  	self.element.style.background = "hsl(" + hue + ", 80%, 51%)";  
+    setTimeout (function() { self.changeColor() } , 500);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+
+}
+
+class Light2 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light2';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
+	  this.element.style.top = '13vw';
+    this.element.style.left = '27vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(89, 43%, 51%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor2() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*50;
+  	self.element.style.background = "hsl(" + hue + ", 40%, 40%)";  
+    setTimeout (function() { self.changeColor2() } , 300);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+
+class Light3 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light3';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
+	  this.element.style.top = '22vw';
+    this.element.style.left = '40vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(89, 50%, 70%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor3() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*80;
+  	self.element.style.background = "hsl(" + hue + ", 50%, 70%)";  
+    setTimeout (function() { self.changeColor3() } , 400);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+
+class Light4 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light4';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
+	  this.element.style.top = '27vw';
+    this.element.style.left = '25vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 80%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor4() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*240;
+  	self.element.style.background = "hsl(" + hue + ", 90%, 80%)";  
+    setTimeout (function() { self.changeColor4() } , 200);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+
+class Light5 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light5';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
+	  this.element.style.top = '35vw';
+    this.element.style.left = '40vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 80%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor5() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*120;
+  	self.element.style.background = "hsl(" + hue + ", 60%, 50%)";  
+    setTimeout (function() { self.changeColor5() } , 700);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+
+class Light6 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light6';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
+	  this.element.style.top = '43vw';
+    this.element.style.left = '30vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 80%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor6() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*360;
+  	self.element.style.background = "hsl(" + hue + ", 60%, 60%)";  
+    setTimeout (function() { self.changeColor6() } , 250);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+class Light7 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light7';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
+	  this.element.style.top = '45vw';
+    this.element.style.left = '50vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 80%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor7() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*360;
+  	self.element.style.background = "hsl(" + hue + ", 40%, 80%)";  
+    setTimeout (function() { self.changeColor7() } , 250);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+class Light8 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light8';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
+	  this.element.style.top = '38vw';
+    this.element.style.left = '15vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 80%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor8() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*300;
+  	self.element.style.background = "hsl(" + hue + ", 40%, 30%)";  
+    setTimeout (function() { self.changeColor8() } , 250);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+
+class Light9 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light9';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
+	  this.element.style.top = '50vw';
+    this.element.style.left = '18vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 80%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor9() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*240;
+  	self.element.style.background = "hsl(" + hue + ", 80%, 75%)";  
+    setTimeout (function() { self.changeColor9() } , 100);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+class Light10 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light10';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
+	  this.element.style.top = '53vw';
+    this.element.style.left = '40vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 80%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor10() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*280;
+  	self.element.style.background = "hsl(" + hue + ", 90%, 60%)";  
+    setTimeout (function() { self.changeColor10() } , 150);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+
+class Light11 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light11';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
+	  this.element.style.top = '63vw';
+    this.element.style.left = '10vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 80%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor11() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*200;
+  	self.element.style.background = "hsl(" + hue + ", 80%, 50%)";  
+    setTimeout (function() { self.changeColor11() } , 250);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+class Light12 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light12';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
+	  this.element.style.top = '63vw';
+    this.element.style.left = '58vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 80%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor12() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*300;
+  	self.element.style.background = "hsl(" + hue + ", 80%, 70%)";  
+    setTimeout (function() { self.changeColor12() } , 250);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+
+class Light13 {
+  
+  constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light13';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
+	  this.element.style.top = '10vw';
+    this.element.style.left = '40vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(89, 50%, 51%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor19() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*240;
+  	self.element.style.background = "hsl(" + hue + ", 80%, 51%)";  
+    setTimeout (function() { self.changeColor19() } , 550);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+
+}
+class Light14 {
+  
+  constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light14';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
+	  this.element.style.top = '15vw';
+    this.element.style.left = '35vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(89, 50%, 51%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor20() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*100;
+  	self.element.style.background = "hsl(" + hue + ", 80%, 81%)";  
+    setTimeout (function() { self.changeColor20() } , 660);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+
+}
+class Light15 {
+  
+  constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'light15';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
+	  this.element.style.top = '21vw';
+    this.element.style.left = '32vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(89, 50%, 51%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor21() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*150;
+  	self.element.style.background = "hsl(" + hue + ", 60%, 81%)";  
+    setTimeout (function() { self.changeColor21() } , 520);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+
+}
+
+
+
+
+class Hat1 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'hat1';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
+	  this.element.style.top = '76vw';
+    this.element.style.left = '12vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 60%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor13() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*240;
+  	self.element.style.background = "hsl(" + hue + ", 80%, 60%)";  
+    setTimeout (function() { self.changeColor13() } , 50);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+class Hat2 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'hat2';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
+	  this.element.style.top = '75vw';
+    this.element.style.left = '13vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 60%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor14() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*240;
+  	self.element.style.background = "hsl(" + hue + ", 80%, 60%)";  
+    setTimeout (function() { self.changeColor14() } , 50);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+class Hat3 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'hat3';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
+	  this.element.style.top = '74vw';
+    this.element.style.left = '14vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 60%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor15() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*240;
+  	self.element.style.background = "hsl(" + hue + ", 80%, 60%)";  
+    setTimeout (function() { self.changeColor15() } , 50);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+class Hat4 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'hat4';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
+	  this.element.style.top = '73vw';
+    this.element.style.left = '15vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 60%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor16() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*240;
+  	self.element.style.background = "hsl(" + hue + ", 80%, 60%)";  
+    setTimeout (function() { self.changeColor16() } , 50);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+class Hat5 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'hat5';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
+	  this.element.style.top = '72vw';
+    this.element.style.left = '16vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 60%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor17() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*240;
+  	self.element.style.background = "hsl(" + hue + ", 80%, 60%)";  
+    setTimeout (function() { self.changeColor17() } , 50);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+class Hat6 {
+  
+   constructor() {  
+  	// create/append div dynamically
+    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
+    this.element = document.createElement ('div');
+    //this = iDiv;
+    this.element.id = 'hat6';
+    // set element style attribute
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
+	  this.element.style.top = '71vw';
+    this.element.style.left = '17vw';
+    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
+    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
+    this.element.style.background = "hsl(240, 70%, 60%)";
+    document.getElementsByTagName('body')[0].appendChild(this.element);
+  }
+
+	changeColor18() {
+  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
+    var self = this;
+  	var hue = Math.random()*240;
+  	self.element.style.background = "hsl(" + hue + ", 80%, 60%)";  
+    setTimeout (function() { self.changeColor18() } , 50);
+		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
+  }
+}
+
+
+
+
+////////////////////////////////
+init();
+
+function init() {
+  var light = new Light();
+  light.changeColor();
+  
+  var light2 = new Light2();
+  light2.changeColor2();
+  
+  var light3 = new Light3();
+  light3.changeColor3();
+  
+  var light4 = new Light4();
+  light4.changeColor4();
+  
+  var light5 = new Light5();
+  light5.changeColor5();
+  
+  var light6 = new Light6();
+  light6.changeColor6();
+  
+  var light7 = new Light7();
+  light7.changeColor7();
+  
+  var light8 = new Light8();
+  light8.changeColor8();
+  
+  var light9 = new Light9();
+  light9.changeColor9();
+  
+  var light10 = new Light10();
+  light10.changeColor10();
+  
+  var light11 = new Light11();
+  light11.changeColor11();
+  
+   var light12 = new Light12();
+  light12.changeColor12();
+  
+  var light13 = new Light13();
+  light13.changeColor19();
+  
+  var light14 = new Light14();
+  light14.changeColor20();
+  
+  var light15 = new Light15();
+  light15.changeColor21();
+  
+  
+  
+  var hat1 = new Hat1();
+  hat1.changeColor13();
+  
+  var hat2 = new Hat2();
+  hat2.changeColor14();
+  
+  var hat3 = new Hat3();
+  hat3.changeColor15();
+  
+  var hat4 = new Hat4();
+  hat4.changeColor16();
+  
+  var hat5 = new Hat5();
+  hat5.changeColor17();
+  
+  var hat6 = new Hat6();
+  hat6.changeColor18();
+  
+ 
+  
+}
+
+
+
+
+
+</script>
+</body>
+
+</html>
