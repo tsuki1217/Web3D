@@ -17,35 +17,45 @@
 background:pink;width:20px;height:20px;  
 border-radius:15px;z-index:1"></div>
 -->
-  <img src="https://i.imgur.com/omX5Drl.png" style="position:absolute;top:0vw;left:0vw;width:70vw;z-index:-1">
+  <img src="https://i.imgur.com/omX5Drl.png" style="position:absolute;top:0vw;left:0vw;width:30%;z-index:-1">
   
-  <img src="https://imgur.com/zuuKlvv.png" style="position:absolute;top:70vw;left:35vw;width:30vw;z-index:1">
+  <img src="https://imgur.com/zuuKlvv.png" style="position:absolute;top:30vw;left:20vw;width:10%;z-index:1">
 
 <!--yoshi-->
-<img src="https://imgur.com/b8HTWp9.png" style="position:absolute;top:75vw;left:10vw;width:30vw;z-index:1">
-<img src="https://imgur.com/8VPDHBK.png" style="position:absolute;top:70vw;left:8vw;width:15vw;z-index:1">
+<img src="https://imgur.com/b8HTWp9.png" style="position:absolute;top:30vw;left:4vw;width:15%;z-index:1">
+<img src="https://imgur.com/8VPDHBK.png" style="position:absolute;top:27vw;left:3vw;width:8%;z-index:1">
 
 <!--Candy-->
-<img src="https://imgur.com/URdKQNv.png" style="position:absolute;top:5vw;left:20vw;width:10vw;z-index:1">
-<img src="https://imgur.com/URdKQNv.png" style="position:absolute;top:55vw;left:25vw;width:10vw;z-index:1">
-<img src="https://imgur.com/j19NFaa.png" style="position:absolute;top:30vw;left:16vw;width:10vw;z-index:1">
-<img src="https://imgur.com/4XAdcd5.png" style="position:absolute;top:35vw;left:46vw;width:10vw;z-index:1">
+<img src="https://imgur.com/URdKQNv.png" style="position:absolute;top:5vw;left:10vw;width:5%;z-index:1">
+<img src="https://imgur.com/URdKQNv.png" style="position:absolute;top:15vw;left:20vw;width:5%;z-index:1">
+<img src="https://imgur.com/j19NFaa.png" style="position:absolute;top:13vw;left:9vw;width:5%;z-index:1">
+<img src="https://imgur.com/4XAdcd5.png" style="position:absolute;top:23vw;left:15vw;width:5%;z-index:1">
 
 
 <!--Diamond-->
 
 
-<img src="https://imgur.com/Z26koLh.png" style="position:absolute;top:85vw;left:40vw;width:30vw;z-index:1">
-<img src="https://imgur.com/BLPA9hI.png" style="position:absolute;top:90vw;left:57vw;width:30vw;z-index:1">
+<img src="https://imgur.com/Z26koLh.png" style="position:absolute;top:37vw;left:17vw;width:10%;z-index:1">
+<img src="https://imgur.com/BLPA9hI.png" style="position:absolute;top:39vw;left:22vw;width:10%;z-index:1">
 
 
-<img src="https://imgur.com/DMX7YPH.png" style="position:absolute;top:105vw;left:80vw;width:7vw;z-index:1">
-<img src="https://imgur.com/DMX7YPH.png" style="position:absolute;top:110vw;left:89vw;width:7vw;z-index:1">
+<img src="https://imgur.com/DMX7YPH.png" style="position:absolute;top:42vw;left:30vw;width:2%;z-index:1">
+<img src="https://imgur.com/DMX7YPH.png" style="position:absolute;top:44vw;left:32vw;width:3%;z-index:1">
+
+
+<!--神奇按鈕-->
+<button id="toggle" style="position:absolute;background:pink;top:10vw;left:30vw;width:60px;height:60px;border-radius:15px;z-index:1">
+Magical button
+</button>
 
 </div>
 
 
+
 <script>
+
+
+
 class Light {
   
   constructor() {  
@@ -57,11 +67,11 @@ class Light {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
-	  this.element.style.top = '5vw';
-    this.element.style.left = '35vw';
+	  this.element.style.top = '3vw';
+    this.element.style.left = '10vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(89, 50%, 51%)";
+    this.element.style.background = "hsl(89, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -75,7 +85,6 @@ class Light {
   }
 
 }
-
 class Light2 {
   
    constructor() {  
@@ -88,10 +97,10 @@ class Light2 {
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
 	  this.element.style.top = '13vw';
-    this.element.style.left = '27vw';
+    this.element.style.left = '20vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(89, 43%, 51%)";
+    this.element.style.background = "hsl(89, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -104,7 +113,6 @@ class Light2 {
 		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
   }
 }
-
 class Light3 {
   
    constructor() {  
@@ -116,11 +124,11 @@ class Light3 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
-	  this.element.style.top = '22vw';
-    this.element.style.left = '40vw';
+	  this.element.style.top = '1vw';
+    this.element.style.left = '15vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(89, 50%, 70%)";
+    this.element.style.background = "hsl(89, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -133,7 +141,6 @@ class Light3 {
 		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
   }
 }
-
 class Light4 {
   
    constructor() {  
@@ -145,11 +152,11 @@ class Light4 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
-	  this.element.style.top = '27vw';
-    this.element.style.left = '25vw';
+	  this.element.style.top = '20vw';
+    this.element.style.left = '11vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 80%)";
+    this.element.style.background = "hsl(240, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -162,7 +169,6 @@ class Light4 {
 		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
   }
 }
-
 class Light5 {
   
    constructor() {  
@@ -174,11 +180,11 @@ class Light5 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
-	  this.element.style.top = '35vw';
-    this.element.style.left = '40vw';
+	  this.element.style.top = '16vw';
+    this.element.style.left = '7vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 80%)";
+    this.element.style.background = "hsl(240, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -191,7 +197,6 @@ class Light5 {
 		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
   }
 }
-
 class Light6 {
   
    constructor() {  
@@ -203,11 +208,11 @@ class Light6 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
-	  this.element.style.top = '43vw';
-    this.element.style.left = '30vw';
+	  this.element.style.top = '7vw';
+    this.element.style.left = '15vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 80%)";
+    this.element.style.background = "hsl(240, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -231,11 +236,11 @@ class Light7 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
-	  this.element.style.top = '45vw';
-    this.element.style.left = '50vw';
+	  this.element.style.top = '26vw';
+    this.element.style.left = '25vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 80%)";
+    this.element.style.background = "hsl(240, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -259,11 +264,11 @@ class Light8 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
-	  this.element.style.top = '38vw';
-    this.element.style.left = '15vw';
+	  this.element.style.top = '13vw';
+    this.element.style.left = '13vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 80%)";
+    this.element.style.background = "hsl(240, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -276,7 +281,6 @@ class Light8 {
 		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
   }
 }
-
 class Light9 {
   
    constructor() {  
@@ -288,11 +292,11 @@ class Light9 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
-	  this.element.style.top = '50vw';
+	  this.element.style.top = '18vw';
     this.element.style.left = '18vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 80%)";
+    this.element.style.background = "hsl(240, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -316,11 +320,11 @@ class Light10 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
-	  this.element.style.top = '53vw';
-    this.element.style.left = '40vw';
+	  this.element.style.top = '22vw';
+    this.element.style.left = '5vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 80%)";
+    this.element.style.background = "hsl(240, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -333,7 +337,6 @@ class Light10 {
 		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
   }
 }
-
 class Light11 {
   
    constructor() {  
@@ -345,11 +348,11 @@ class Light11 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
-	  this.element.style.top = '63vw';
-    this.element.style.left = '10vw';
+	  this.element.style.top = '9vw';
+    this.element.style.left = '7vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 80%)";
+    this.element.style.background = "hsl(240, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -373,11 +376,11 @@ class Light12 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:15px;z-index:1"; 
-	  this.element.style.top = '63vw';
-    this.element.style.left = '58vw';
+	  this.element.style.top = '23vw';
+    this.element.style.left = '20vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 80%)";
+    this.element.style.background = "hsl(240, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -390,7 +393,6 @@ class Light12 {
 		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
   }
 }
-
 class Light13 {
   
   constructor() {  
@@ -402,11 +404,11 @@ class Light13 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
-	  this.element.style.top = '10vw';
-    this.element.style.left = '40vw';
+	  this.element.style.top = '9vw';
+    this.element.style.left = '23vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(89, 50%, 51%)";
+    this.element.style.background = "hsl(89, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -431,11 +433,11 @@ class Light14 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
-	  this.element.style.top = '15vw';
-    this.element.style.left = '35vw';
+	  this.element.style.top = '25vw';
+    this.element.style.left = '12vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(89, 50%, 51%)";
+    this.element.style.background = "hsl(89, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -460,11 +462,11 @@ class Light15 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
-	  this.element.style.top = '21vw';
-    this.element.style.left = '32vw';
+	  this.element.style.top = '20vw';
+    this.element.style.left = '25vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(89, 50%, 51%)";
+    this.element.style.background = "hsl(89, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -480,8 +482,6 @@ class Light15 {
 }
 
 
-
-
 class Hat1 {
   
    constructor() {  
@@ -493,11 +493,11 @@ class Hat1 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
-	  this.element.style.top = '76vw';
-    this.element.style.left = '12vw';
+	  this.element.style.top = '31vw';
+    this.element.style.left = '5vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 60%)";
+    this.element.style.background = "hsl(240, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -521,11 +521,11 @@ class Hat2 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
-	  this.element.style.top = '75vw';
-    this.element.style.left = '13vw';
+	  this.element.style.top = '30vw';
+    this.element.style.left = '6vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 60%)";
+    this.element.style.background = "hsl(240, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -549,11 +549,11 @@ class Hat3 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
-	  this.element.style.top = '74vw';
-    this.element.style.left = '14vw';
+	  this.element.style.top = '29vw';
+    this.element.style.left = '7vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 60%)";
+    this.element.style.background = "hsl(240, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -577,11 +577,11 @@ class Hat4 {
     // set element style attribute
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
     this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
-	  this.element.style.top = '73vw';
-    this.element.style.left = '15vw';
+	  this.element.style.top = '28vw';
+    this.element.style.left = '8vw';
     // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
     // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 60%)";
+    this.element.style.background = "hsl(240, 0%, 80%)";
     document.getElementsByTagName('body')[0].appendChild(this.element);
   }
 
@@ -594,71 +594,15 @@ class Hat4 {
 		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
   }
 }
-class Hat5 {
-  
-   constructor() {  
-  	// create/append div dynamically
-    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
-    this.element = document.createElement ('div');
-    //this = iDiv;
-    this.element.id = 'hat5';
-    // set element style attribute
-    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
-    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
-	  this.element.style.top = '72vw';
-    this.element.style.left = '16vw';
-    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
-    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 60%)";
-    document.getElementsByTagName('body')[0].appendChild(this.element);
-  }
-
-	changeColor17() {
-  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
-    var self = this;
-  	var hue = Math.random()*240;
-  	self.element.style.background = "hsl(" + hue + ", 80%, 60%)";  
-    setTimeout (function() { self.changeColor17() } , 50);
-		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
-  }
-}
-class Hat6 {
-  
-   constructor() {  
-  	// create/append div dynamically
-    // https://stackoverflow.com/questions/14004117/create-div-and-append-div-dynamically
-    this.element = document.createElement ('div');
-    //this = iDiv;
-    this.element.id = 'hat6';
-    // set element style attribute
-    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
-    this.element.style.cssText = "position:absolute;width:30px;height:30px;border-radius:30px;z-index:1"; 
-	  this.element.style.top = '71vw';
-    this.element.style.left = '17vw';
-    // CSS color property: https://www.w3schools.com/cssref/pr_text_color.asp
-    // hsl: https://www.w3schools.com/colors/colors_hsl.asp
-    this.element.style.background = "hsl(240, 70%, 60%)";
-    document.getElementsByTagName('body')[0].appendChild(this.element);
-  }
-
-	changeColor18() {
-  	// https://stackoverflow.com/questions/45147661/javascript-recursion-within-a-class/45147713
-    var self = this;
-  	var hue = Math.random()*240;
-  	self.element.style.background = "hsl(" + hue + ", 80%, 60%)";  
-    setTimeout (function() { self.changeColor18() } , 50);
-		// setTimeout ( self.changeColor , 1000);  // why this is not working ...
-  }
-}
 
 
 
 
 ////////////////////////////////
-init();
 
-function init() {
-  var light = new Light();
+
+function ON() {
+ 	var light = new Light();
   light.changeColor();
   
   var light2 = new Light2();
@@ -673,7 +617,7 @@ function init() {
   var light5 = new Light5();
   light5.changeColor5();
   
-  var light6 = new Light6();
+ var light6 = new Light6();
   light6.changeColor6();
   
   var light7 = new Light7();
@@ -717,17 +661,92 @@ function init() {
   var hat4 = new Hat4();
   hat4.changeColor16();
   
-  var hat5 = new Hat5();
-  hat5.changeColor17();
   
-  var hat6 = new Hat6();
-  hat6.changeColor18();
+}
+function OFF() {
+  var light = new Light();
   
+  
+  var light2 = new Light2();
+  
+  
+  var light3 = new Light3();
  
   
+  var light4 = new Light4();
+  
+  
+  var light5 = new Light5();
+  
+  
+  var light6 = new Light6();
+  
+  
+  var light7 = new Light7();
+ 
+  
+  var light8 = new Light8();
+ 
+  
+  var light9 = new Light9();
+ 
+  
+  var light10 = new Light10();
+ 
+  
+  var light11 = new Light11();
+
+  
+   var light12 = new Light12();
+ 
+  
+  var light13 = new Light13();
+
+  
+  var light14 = new Light14();
+ 
+  
+  var light15 = new Light15();
+ 
+  
+  
+  
+  var hat1 = new Hat1();
+
+  
+  var hat2 = new Hat2();
+ 
+  
+  var hat3 = new Hat3();
+ 
+  
+  var hat4 = new Hat4();
+ 
 }
 
 
+
+ON();
+
+var b = document.getElementById ("toggle");
+
+var status = 0;
+
+b.addEventListener("click", function(){
+	console.log(status);
+  if (status == 1) {
+	status = 0;
+	b.innerHTML = "Turn OFF";
+  	ON();
+    
+  } else {
+  	status = 1;
+    	b.innerHTML = "Turn ON";
+	OFF();
+  } 
+
+	console.log(status); 
+});
 
 
 
