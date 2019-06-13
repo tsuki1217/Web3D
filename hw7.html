@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<style>
+
+
+</style>
+</head>
+
+<body> 
+
+<div id="info">Painting on Wall
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
+<script src="https://threejs.org/examples/js/controls/OrbitControls.js">
+</script>
+
+
+
+
+
+<script>
+
+var camera, scene, renderer;
+
+var lights = [],  paints = [],  cams = [],  walls = [];
+init();
+animate();
+
+
+function architecture() {
+
+  walls[1] = new THREE.Mesh(new THREE.BoxGeometry(200, 50, 5), new THREE.MeshNormalMaterial());
+  scene.add(walls[1]);
+  walls[1].position.set(0, 25, -100);
+  
+  walls[2] = new THREE.Mesh(new THREE.BoxGeometry(200, 50, 5), new THREE.MeshNormalMaterial());
+  scene.add(walls[2]);
+  walls[2].position.set(0, 25, 100);
+  
+  walls[3] = new THREE.Mesh(new THREE.BoxGeometry(5, 50, 200), new THREE.MeshNormalMaterial());
+  scene.add(walls[3]);
+  walls[3].position.set(100, 25, 0);
+  
+   walls[4] = new THREE.Mesh(new THREE.BoxGeometry(5, 50, 200), new THREE.MeshNormalMaterial());
+  scene.add(walls[4]);
+  walls[4].position.set(-100, 25, 0);
+  
+  walls[5] = new THREE.Mesh(new THREE.BoxGeometry(100, 50, 10), new THREE.MeshNormalMaterial());
+  scene.add(walls[5]);
+  walls[5].position.set(50, 25, 60);
+  
+   walls[6] = new THREE.Mesh(new THREE.BoxGeometry(10, 50, 40), new THREE.MeshNormalMaterial());
+  scene.add(walls[6]);
+  walls[6].position.set(0, 25, 45);
+  
+  walls[7] = new THREE.Mesh(new THREE.BoxGeometry(40, 50, 10), new THREE.MeshNormalMaterial());
+  scene.add(walls[7]);
+  walls[7].position.set(-15, 25, 20);
+  
+  walls[8] = new THREE.Mesh(new THREE.BoxGeometry(10, 50, 60), new THREE.MeshNormalMaterial());
+  scene.add(walls[8]);
+  walls[8].position.set(60, 25, -70);
+  
+   walls[9] = new THREE.Mesh(new THREE.BoxGeometry(70, 50, 10), new THREE.MeshNormalMaterial());
+  scene.add(walls[9]);
+  walls[9].position.set(-20, 25, -40);
+  
+   walls[10] = new THREE.Mesh(new THREE.BoxGeometry(10, 50, 70), new THREE.MeshNormalMaterial());
+  scene.add(walls[10]);
+  walls[10].position.set(-20, 25, -40);
+  
+  walls[10] = new THREE.Mesh(new THREE.BoxGeometry(40, 50, 10), new THREE.MeshNormalMaterial());
+  scene.add(walls[10]);
+  walls[10].position.set(-50, 25, 70);
+  
+  
+  //hole
+  walls[11] = new THREE.Mesh(new THREE.CircleGeometry(10,40), new THREE.MeshBasicMaterial({ color: 0x000000 }));
+  scene.add(walls[11]);
+  walls[11].position.set(-20, 1, 50);
+  walls[11].rotation.x = -Math.PI / 2
+  
+  walls[12] = new THREE.Mesh(new THREE.CircleGeometry(10,40), new THREE.MeshBasicMaterial({ color: 0x000000 }));
+  scene.add(walls[12]);
+  walls[12].position.set(80, 1, -10);
+  walls[12].rotation.x = -Math.PI / 2
+  
+ walls[13] = new THREE.Mesh(new THREE.CircleGeometry(10,40), new THREE.MeshBasicMaterial({ color: 0x000000 }));
+  scene.add(walls[13]);
+  walls[13].position.set(-80, 1, -70);
+  walls[13].rotation.x = -Math.PI / 2
+  
+  walls[14] = new THREE.Mesh(new THREE.CircleGeometry(10,40), new THREE.MeshBasicMaterial({ color: 0x33FF33 }));
+  scene.add(walls[14]);
+  walls[14].position.set(80, 1, -80);
+  walls[14].rotation.x = -Math.PI / 2
+  
+  walls[15] = new THREE.Mesh(new THREE.CircleGeometry(10,40), new THREE.MeshBasicMaterial({ color: 0x33FF33 }));
+  scene.add(walls[15]);
+  walls[15].position.set(80, 1, 80);
+  walls[15].rotation.x = -Math.PI / 2
+ 
+  
+  
+  
+ ////floor///
+ let loader = new THREE.TextureLoader();
+  loader.crossOrigin = '';
+  texture = loader.load('https://i.imgur.com/cIkZ6KE.jpg');
+  texture.repeat.set(20, 2);
+  texture.wrapS = texture.wrapT = true;
+
+  let floor = new THREE.Mesh(new THREE.PlaneGeometry(200, 200), new THREE.MeshPhongMaterial({
+    side: THREE.DoubleSide,
+    map: texture
+  }))
+  scene.add(floor)
+  floor.rotation.x = -Math.PI / 2
+  floor.position.y = 0;
+  
+}
+
+
+
+function init() {
+  scene = new THREE.Scene();
+
+  camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 500);
+  camera.position.y = 300;
+
+  light = new THREE.PointLight(0xffffff);
+  light.position.set(100, 300, 200);
+  scene.add(light);
+
+  var gridXZ = new THREE.GridHelper(200, 20, 'red', 'white');
+  //scene.add(gridXZ);
+
+  renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setClearColor(0x888888);
+
+  let controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+  document.body.appendChild(renderer.domElement);
+  
+  //ball
+  let ball = new THREE.Mesh(new THREE.SphereGeometry(10,20,20), new THREE.MeshNormalMaterial());
+  scene.add(ball);
+  ball.position.set(110, 60, 110); 
+  
+ 
+  ///////////////////////////////////////////////////////////
+ 
+ 	architecture();
+
+}
+
+
+function animate() {
+  requestAnimationFrame(animate);
+  render();
+}
+
+function render() {
+  renderer.render(scene, camera);
+}
+
+
+
+
+
+</script>
+</body>
+
+</html>
